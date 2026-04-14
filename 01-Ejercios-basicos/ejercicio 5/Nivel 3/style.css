@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.pagina-header {
+    background-color: #e8202a;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px;
+    letter-spacing: 2px;
+}
+
+.content {
+    padding: 16px;
+}
+
+.section-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.stats-container {
+    background-color: #1e2235;
+    border-radius: 4px;
+    display: flex;
+    align-items: stretch;
+    padding: 12px 10px;
+    gap: 10px;
+}
+
+.stat-card {
+    flex: 1;
+    background-color: #252b45;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 10px;
+    gap: 6px;
+}
+
+.stat-card-cursos {
+    flex: 1;
+    background-color: #e8476a;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 10px;
+    gap: 6px;
+}
+
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.62rem;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+}
