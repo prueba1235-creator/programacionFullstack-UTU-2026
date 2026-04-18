@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background-color: #2c2c2c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 100;
+}
+
+.campana {
+    font-size: 18px;
+}
+
+.sticky-zone {
+    margin-top: 45px;
+    height: 300px;
+    border-bottom: 3px dashed red;
+}
+
+.categorias {
+    position: sticky;
+    top: 45px;
+    background-color: #7ab3d9;
+    color: white;
+    padding: 12px 16px;
+    font-size: 15px;
+}
+
+.contenido {
+    background-color: #f0f0f0;
+    padding: 24px 16px;
+    min-height: 1000px;
+    color: #444;
+}
