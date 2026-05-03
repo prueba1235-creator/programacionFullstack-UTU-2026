@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('image-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+}
+
+.logo {
+    font-family: monospace;
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #fafafa;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    margin-left: 7rem;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+    margin-right: 13rem;
+    margin-top: 4rem;
+}
+
+.nav-links a {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.65;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5rem;
+    padding-left: 15rem;
+}
+
+.hero-box {
+    border: 2px solid #fff;
+    padding: 2.2rem 2rem;
+    max-width: 680px;
+}
+
+.hero-box h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 4.5rem;
+    color: #fff;
+    line-height: 1.05;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 7rem 5rem;
+    background: #fff;
+    position: relative;
+}
+
+.about-image {
+    width: 52%;
+    background: #c77dcc;
+    padding-top: 3rem;
+    padding-right: 3rem;
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+    padding-left: 5rem;
+}
+
+.about-text h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    color: #111;
+    margin-bottom: 1.8rem;
+}
+
+.about-text p {
+    font-family: 'Alata', sans-serif;
+    font-size: 0.95rem;
+    color: #888;
+    line-height: 1.8;
+}
+
+.creations {
+    padding: 5rem;
+    background: #fff;
+}
+
+.creations-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.creations-header h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #111;
+}
+
+.btn-all {
+    font-family: 'Alata', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #111;
+    border: 1.5px solid #111;
+    padding: 0.7rem 2.4rem;
+    text-decoration: none;
+
+}
+
+
+
+.creations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    column-gap: 30px;
+}
+
+
+.card {
+    position: relative;
+    max-height: 570px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.07);
+}
+
+.card-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.15;
+}
+
+footer {
+    background: #111;
+    padding: 2.5rem 5rem;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.footer-social a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.footer-social a:hover {
+    opacity: 0.6;
+}
+
+.footer-social i {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.footer-a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.footer-nav a {
+    font-family: 'Alata', sans-serif;
+    font-size: 0.88rem;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.footer-nav a:hover {
+    opacity: 0.6;
+}
+
+.copyright {
+    font-family: 'Alata', sans-serif;
+    font-size: 0.82rem;
+    color: #888;
+}
