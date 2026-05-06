@@ -1,1 +1,3 @@
-A defenderlo
+A defenderlo     
+
+Buenas, porque un 1 si no tiene nada que no hayamos visto, ni nada raro en el css? esta simple: uso del display,align,hoover,justify, y alguna transicion simple de una linea de codigo al pasar por arriba? Luego el html tiene el header con los <a> y la imagen, y otra seccion con las imagenes en divs... y el footer básico.
