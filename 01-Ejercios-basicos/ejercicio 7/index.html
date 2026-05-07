@@ -27,14 +27,14 @@
         <div class="panel row align-items-center g-2 mb-4 p-3">
 
 
-            <div class="col-6 col-sm-3 col-md-auto">
+            <div class="col-6 col-sm-3 col-md-auto"> <!-- col-6: En móviles, ocupa el 50% del ancho (2 por fila).-->
                 <div class="contador">
                     <span class="contador-label">Intentos</span>
                     <span class="contador-numero" id="intentos">0</span>
                 </div>
             </div>
 
-            <div class="col-6 col-sm-3 col-md-auto">
+            <div class="col-6 col-sm-3 col-md-auto"> <!-- col-sm-3: En tablets, ocupa el 25% del ancho (4 por fila). -->
                 <div class="contador">
                     <span class="contador-label">Pares</span>
                     <span class="contador-numero" id="pares">0/10</span>
@@ -43,6 +43,7 @@
 
 
             <div class="col-12 col-sm-auto flex-grow-1 text-center">
+                <!--col-md-auto: En PC, el ancho se ajusta automáticamente al tamaño del contenido -->
                 <span class="mensaje" id="mensaje">¡Encontrá un par!</span>
             </div>
 
