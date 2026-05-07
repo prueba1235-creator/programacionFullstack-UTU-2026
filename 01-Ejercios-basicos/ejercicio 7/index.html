@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Memoria</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@600;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container py-4">
+
+        <div class="text-center mb-4">
+            <h1 class="titulo">Juego de Memoria</h1>
+        </div>
+
+
+        <div class="panel row align-items-center g-2 mb-4 p-3">
+
+
+            <div class="col-6 col-sm-3 col-md-auto">
+                <div class="contador">
+                    <span class="contador-label">Intentos</span>
+                    <span class="contador-numero" id="intentos">0</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-3 col-md-auto">
+                <div class="contador">
+                    <span class="contador-label">Pares</span>
+                    <span class="contador-numero" id="pares">0/10</span>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-sm-auto flex-grow-1 text-center">
+                <span class="mensaje" id="mensaje">¡Encontrá un par!</span>
+            </div>
+
+
+            <div class="col-12 col-sm-auto d-flex gap-2 justify-content-center">
+                <button class="btn boton-iniciar">Empezar</button>
+                <button class="btn boton-reiniciar">Reiniciar</button>
+                <button class="btn boton-terminar">Terminar</button>
+            </div>
+
+        </div>
+
+
+        <div class="tablero row g-3 justify-content-center">
+
+            <!-- Par: gato -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="gato">
+                    <img src="https://picsum.photos/id/1/150/150" alt="gato" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="gato">
+                    <img src="https://picsum.photos/id/1/150/150" alt="gato" />
+                </div>
+            </div>
+
+            <!-- Par: montaña -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="montana">
+                    <img src="https://picsum.photos/id/10/150/150" alt="montaña" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="montana">
+                    <img src="https://picsum.photos/id/10/150/150" alt="montaña" />
+                </div>
+            </div>
+
+            <!-- Par: ciudad -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="ciudad">
+                    <img src="https://picsum.photos/id/20/150/150" alt="ciudad" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="ciudad">
+                    <img src="https://picsum.photos/id/20/150/150" alt="ciudad" />
+                </div>
+            </div>
+
+            <!-- Par: playa -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="playa">
+                    <img src="https://picsum.photos/id/30/150/150" alt="playa" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="playa">
+                    <img src="https://picsum.photos/id/30/150/150" alt="playa" />
+                </div>
+            </div>
+
+            <!-- Par: bosque -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="bosque">
+                    <img src="https://picsum.photos/id/40/150/150" alt="bosque" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="bosque">
+                    <img src="https://picsum.photos/id/40/150/150" alt="bosque" />
+                </div>
+            </div>
+
+            <!-- Par: puente -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="puente">
+                    <img src="https://picsum.photos/id/50/150/150" alt="puente" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="puente">
+                    <img src="https://picsum.photos/id/50/150/150" alt="puente" />
+                </div>
+            </div>
+
+            <!-- Par: perro -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="perro">
+                    <img src="https://picsum.photos/id/60/150/150" alt="perro" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="perro">
+                    <img src="https://picsum.photos/id/60/150/150" alt="perro" />
+                </div>
+            </div>
+
+            <!-- Par: desierto -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="desierto">
+                    <img src="https://picsum.photos/id/70/150/150" alt="desierto" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="desierto">
+                    <img src="https://picsum.photos/id/70/150/150" alt="desierto" />
+                </div>
+            </div>
+
+            <!-- Par: flor -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="flor">
+                    <img src="https://picsum.photos/id/80/150/150" alt="flor" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="flor">
+                    <img src="https://picsum.photos/id/80/150/150" alt="flor" />
+                </div>
+            </div>
+
+            <!-- Par: nieve -->
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="nieve">
+                    <img src="https://picsum.photos/id/90/150/150" alt="nieve" />
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta" data-card="nieve">
+                    <img src="https://picsum.photos/id/90/150/150" alt="nieve" />
+                </div>
+            </div>
+
+            <div class="col-4 col-sm-3 col-md-2">
+                <div class="card carta pregunta" data-card="reverso">
+                    <span class="signo">?</span>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
