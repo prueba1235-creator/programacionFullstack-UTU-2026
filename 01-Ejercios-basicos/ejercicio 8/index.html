@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXUS-7 // Registro Civil Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">NEXUS-7</div>
+        <div class="header-right">
+            <span><span class="status-dot"></span>SISTEMA ACTIVO</span>
+            <span id="reloj"></span>
+        </div>
+    </header>
+
+    <nav>
+        <button id="nav-nuevo" class="nav-btn active">NUEVO EXPEDIENTE</button>
+        <button id="nav-archivo" class="nav-btn">ARCHIVO <span id="nav-count">0</span></button>
+    </nav>
+
+    <main>
+
+        <!-- Inicio -->
+        <div id="intro-section">
+            <div class="big-title">REGISTRO CIVIL</div>
+            <div class="subtitle">UNIDAD DE IDENTIFICACIÓN CIUDADANA // AÑO 2087</div>
+            <div class="input-group">
+                <span class="input-prefix">&gt;_</span>
+                <input id="nombre-input" type="text" placeholder="ingresa tu nombre completo" maxlength="40" />
+                <button id="btn-generar">GENERAR</button>
+            </div>
+            <p class="hint">// presiona ENTER o el botón para generar tu expediente</p>
+        </div>
+
+        <!-- Carga -->
+        <div id="loading-section">
+            <p class="loading-text" id="loading-msg">ACCEDIENDO A BASE DE DATOS...</p>
+            <div class="loading-bar-wrap">
+                <div class="loading-bar-fill" id="loading-bar"></div>
+            </div>
+        </div>
+
+        <!-- Expediente generado -->
+        <div id="expediente-section">
+
+            <div class="action-bar">
+                <button id="btn-nuevo" class="btn-sec">&lt; NUEVO</button>
+                <button id="btn-guardar" class="btn-pri">GUARDAR CIUDADANO</button>
+                <span id="toast-label" class="toast-label"></span>
+            </div>
+
+            <div class="exp-card">
+                <div class="card-header">
+                    <span class="card-header-title">EXPEDIENTE DE CIUDADANO // REGISTRO OFICIAL</span>
+                    <span class="clasificado-badge">● CLASIFICADO</span>
+                </div>
+
+                <div class="card-body">
+                    <div class="col-left">
+                        <div class="avatar-box">
+                            <div id="avatar-pixel"></div>
+                            <div class="scanner-line" id="scanner-line"></div>
+                            <div class="avatar-id-line" id="avatar-id">CIV-2087-XXXXXXX</div>
+                        </div>
+                        <div class="estado-badge" id="estado-badge">ACTIVO</div>
+                        <div class="qr-box">QR DATA</div>
+                    </div>
+
+                    <div class="col-right">
+                        <div>
+                            <div class="citizen-name" id="exp-nombre">—</div>
+                            <div class="citizen-id" id="exp-id">CIV-2087-XXXXXXX-X</div>
+                        </div>
+                        <div class="data-grid">
+                            <div class="data-field"><label>Fecha de nacimiento</label><span id="exp-fecha">—</span>
+                            </div>
+                            <div class="data-field"><label>Sector de residencia</label><span id="exp-sector">—</span>
+                            </div>
+                            <div class="data-field"><label>Ocupación registrada</label><span id="exp-ocupacion">—</span>
+                            </div>
+                            <div class="data-field"><label>Clasificación genética</label><span id="exp-gen">—</span>
+                            </div>
+                        </div>
+                        <div class="trust-section">
+                            <label>Índice de confianza social</label>
+                            <div class="trust-bar-wrap">
+                                <div class="trust-bar-fill" id="trust-fill"></div>
+                            </div>
+                            <div class="trust-labels">
+                                <span>PELIGROSO</span>
+                                <span id="trust-valor">—</span>
+                                <span>EJEMPLAR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="implants-section">
+                    <div class="section-title">// IMPLANTES REGISTRADOS</div>
+                    <div class="implant-list" id="implant-list"></div>
+                </div>
+
+                <div class="infractions-section">
+                    <div class="section-title">// REGISTRO DE INFRACCIONES</div>
+                    <table class="infra-table">
+                        <thead>
+                            <tr>
+                                <th>FECHA</th>
+                                <th>DESCRIPCIÓN</th>
+                                <th>SEVERIDAD</th>
+                            </tr>
+                        </thead>
+                        <tbody id="infra-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Archivo -->
+        <div id="archivo-section">
+            <div class="archivo-header">
+                <div class="archivo-title">BASE DE DATOS CIUDADANA</div>
+                <div class="archivo-subtitle">REGISTROS ALMACENADOS EN SISTEMA LOCAL</div>
+                <div class="search-wrap">
+                    <span class="input-prefix">&gt;_</span>
+                    <input id="search-input" type="text" placeholder="buscar por nombre o ID..." />
+                </div>
+            </div>
+            <div id="ciudadanos-grid"></div>
+            <div id="empty-state" class="empty-state">
+                <p>// NO HAY CIUDADANOS REGISTRADOS EN EL SISTEMA</p>
+                <p class="hint">Genera y guarda un expediente para que aparezca aquí.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Toast de notificación global -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
